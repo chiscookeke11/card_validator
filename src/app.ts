@@ -1,12 +1,12 @@
 import express from "express"
-
+import cardRoutes from "./routes/card.routes"
 
 
 const app = express()
 
 app.use(express.json())
 
-
+app.use("/api", cardRoutes);
 
 app.listen(3000, () => {
     console.log("Server running on port 3000")
