@@ -41,5 +41,7 @@
     "moduleDetection": "force",
     "skipLibCheck": true,
     "esModuleInterop": true
-  }
+  },
+
+  "exclude": ["jest.config.ts", "node_modules", "dist"]
 }

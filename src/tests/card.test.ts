@@ -1,4 +1,4 @@
-import { isValidCardNumber } from "../src/utils/logic"
+import { isValidCardNumber } from "../utils/logic.js"
 
 describe("Card validation", () => {
   it("should validate a correct card", () => {
