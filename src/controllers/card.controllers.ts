@@ -4,6 +4,7 @@ import { isValidCardNumber } from "../utils/logic.js";
 export const validateCard = (req: Request, res: Response) => {
     const { cardNumber } = req.body;
 
+    // Guard clause: the API expects cardNumber in the request payload.
     if (!cardNumber) {
         return res.status(400).json({
             success: false,
@@ -11,6 +12,7 @@ export const validateCard = (req: Request, res: Response) => {
         });
     }
 
+    // Enforce a strict input type before validation.
     if (typeof cardNumber !== "string") {
         return res.status(400).json({
             success: false,
@@ -18,6 +20,7 @@ export const validateCard = (req: Request, res: Response) => {
         });
     }
 
+    // Delegate checksum validation to the Luhn logic helper.
     const isValid = isValidCardNumber(cardNumber);
 
     return res.status(200).json({
