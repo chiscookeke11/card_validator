@@ -43,7 +43,7 @@ This project exposes one HTTP endpoint that accepts a card number and returns wh
 ### Supporting config
 
 - **`tsconfig.json`**: TypeScript compiler options.
-- **`jest.config.js`**: Jest test setup.
+- **`jest.config.cjs`**: Jest test setup (CommonJS config for ESM project compatibility).
 
 ---
 
@@ -155,7 +155,7 @@ This repository includes Jest tests for the Luhn validation utility.
 Run tests with:
 
 ```bash
-npx jest
+npm test
 ```
 
 If you want a watch mode during development:
