@@ -1,5 +1,5 @@
 import express from "express"
-import cardRoutes from "./routes/card.routes"
+import cardRoutes from "./routes/card.routes.js"
 
 
 const app = express()
